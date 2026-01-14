@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="repressilator" name="Repressilator Model">
+
+    <!-- Compartments -->
+    <listOfCompartments>
+      <compartment id="cell" size="1"/>
+    </listOfCompartments>
+
+    <!-- Species -->
+    <listOfSpecies>
+      <species id="X" compartment="cell" initialConcentration="1"/>
+      <species id="Y" compartment="cell" initialConcentration="1"/>
+      <species id="Z" compartment="cell" initialConcentration="1"/>
+    </listOfSpecies>
+
+    <!-- Parameters -->
+    <listOfParameters>
+      <parameter id="alpha" value="10"/>
+      <parameter id="beta" value="2"/>
+      <parameter id="n" value="2"/>
+    </listOfParameters>
+
+    <!-- Reactions -->
+    <listOfReactions>
+
+      <!-- dX/dt -->
+      <reaction id="prod_X" reversible="false">
+        <listOfProducts>
+          <speciesReference species="X"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <divide/>
+                <ci> alpha </ci>
+                <apply>
+                  <plus/>
+                  <cn>1</cn>
+                  <apply>
+                    <power/>
+                    <ci> Z </ci>
+                    <ci> n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> beta </ci>
+                <ci> X </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- dY/dt -->
+      <reaction id="prod_Y" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <divide/>
+                <ci> alpha </ci>
+                <apply>
+                  <plus/>
+                  <cn>1</cn>
+                  <apply>
+                    <power/>
+                    <ci> X </ci>
+                    <ci> n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> beta </ci>
+                <ci> Y </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- dZ/dt -->
+      <reaction id="prod_Z" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Z"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <divide/>
+                <ci> alpha </ci>
+                <apply>
+                  <plus/>
+                  <cn>1</cn>
+                  <apply>
+                    <power/>
+                    <ci> Y </ci>
+                    <ci> n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> beta </ci>
+                <ci> Z </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+    </listOfReactions>
+
+  </model>
+</sbml>

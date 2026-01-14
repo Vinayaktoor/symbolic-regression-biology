@@ -1,0 +1,5 @@
+{
+  "X": "complexity                                      5\nloss                                     0.089818\nequation                      2.3062034 - (Z * Y)\nscore                                    0.027206\nsympy_format                      2.3062034 - Y*Z\nlambda_format    PySRFunction(X=>2.3062034 - Y*Z)\nName: 2, dtype: object",
+  "Y": "complexity                                    3\nloss                                   0.082344\nequation                          1.5257219 - Y\nscore                                   0.03055\nsympy_format                      1.5257219 - Y\nlambda_format    PySRFunction(X=>1.5257219 - Y)\nName: 1, dtype: object",
+  "Z": "complexity                                     5\nloss                                    0.085218\nequation                      2.306912 - (Y * Z)\nscore                                   0.032429\nsympy_format                      2.306912 - Y*Z\nlambda_format    PySRFunction(X=>2.306912 - Y*Z)\nName: 2, dtype: object"
+}
