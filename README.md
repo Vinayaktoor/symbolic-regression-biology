@@ -77,4 +77,4 @@ These ideas align directly with **CellBox-style hybrid mathematical–machine le
 
 ## Author
 
-Vinayak Toor  
+Vinayak Toor  (vinayaktoor AT gmail.com)
