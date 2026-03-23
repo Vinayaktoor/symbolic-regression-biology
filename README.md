@@ -30,7 +30,12 @@ It serves as a challenging benchmark due to:
 
 ## Results: True vs Recovered Dynamics (X)
 
-![True vs Recovered Dynamics for X](figures/true_vs_recovered_X.png)
+![](figures/1.png)
+![](figures/2.png)
+![](figures/3.png)
+![](figures/4.png)
+![](figures/5.png)
+![](figures/6.png)
 
 > **Key finding:**  
 > *Although symbolic regression did not recover the true Hill-function structure, the recovered equations accurately reproduced the steady-state and stability properties of the system, underscoring the importance of dynamical validation and motivating biologically constrained hybrid models.*
